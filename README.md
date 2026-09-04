@@ -16,6 +16,6 @@ Sistemas E-commerce e Lógica de Negócio: Aplicação de JavaScript na criaçã
 
 Design e Interface Responsiva: Uso do Tailwind CSS junto ao HTML/CSS para estruturar layouts modernos, garantindo adaptação a diferentes tamanhos de tela.
 
-<img width="1897" height="1055" alt="nexus1 2" src="https://github.com/user-attachments/assets/ca428ff9-cce9-422b-899c-450029839b76" />
-<img width="1901" height="1061" alt="nexus1 0" src="https://github.com/user-attachments/assets/9856e90a-4c41-405e-b77e-434cd3705f70" />
-<img width="1900" height="1041" alt="nexus1 3" src="https://github.com/user-attachments/assets/4196c639-bd73-43fc-938c-987f3ab056d9" />
+<img width="1901" height="1061" alt="nexus1 0" src="https://github.com/user-attachments/assets/338275f1-5df8-4de8-9577-906b6c25d6b4" />
+<img width="1897" height="1055" alt="nexus1 2" src="https://github.com/user-attachments/assets/1f68fcff-21fb-4c8a-b1c7-861c0126fbfd" />
+<img width="1900" height="1041" alt="nexus1 3" src="https://github.com/user-attachments/assets/527c816d-eab0-4280-b083-4c20c1f994c6" />
