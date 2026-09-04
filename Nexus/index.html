@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS | Inovação Sem Limites</title>
+    <!-- Fontes & Ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SamsungOne:wght@400;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://i.pinimg.com/736x/b0/49/0b/b0490b48d2406216a9c3a6204d3a3d01.jpg" type="image/png">
+</head>
+<body>
+
+    <!-- NAVBAR PREMIUM -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                NEXUS
+            </a>
+
+            <nav class="nav-menu">
+                <a href="#hero-galaxy" class="nav-link active">Destaque</a>
+                <a href="#ecosystem" class="nav-link">Ecossistema</a>
+                <a href="#catalog" class="nav-link">Produtos</a>
+                <a href="#offers" class="nav-link">Ofertas</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Buscar no Nexus.com..." onkeyup="applyFilters()">
+                </div>
+
+                <button class="icon-btn" onclick="toggleModal('user-modal')" title="Minha Conta">
+                    <i class="fa-regular fa-user"></i>
+                    <span id="user-display" class="user-tag">Entrar</span>
+                </button>
+
+                <button class="icon-btn" onclick="toggleModal('fav-modal')" title="Favoritos">
+                    <i class="fa-regular fa-heart"></i>
+                    <span id="fav-count" class="badge">0</span>
+                </button>
+
+                <button class="icon-btn cart-btn" onclick="toggleCart()" title="Carrinho">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count" class="badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- LANDING PAGE HERO 1: FLAGSHIP PRODUCT  -->
+    <section class="hero-section" id="hero-galaxy">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">Nexus AI Integrated</span>
+            <h1 class="hero-title">Nexus Z Fold Ultra</h1>
+            <p class="hero-description">A revolução dobrável. Desempenho incomparável com inteligência artificial integrada para transformar sua produtividade.</p>
+            <div class="hero-cta-group">
+                <button class="btn btn-primary" onclick="quickAddToCart(1)">Comprar Agora</button>
+                <a href="#catalog" class="btn btn-outline">Saiba Mais</a>
+            </div>
+            <div class="hero-price-tag">A partir de R$ 8.999,00 ou 12x de R$ 749,91 sem juros</div>
+        </div>
+        <div class="hero-media">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1000&auto=format&fit=crop" alt="Nexus Z Fold Ultra" class="hero-img">
+        </div>
+    </section>
+
+    <!-- HIGHLIGHT CAROUSEL BANNER / PROMOS -->
+    <section class="promo-strip">
+        <div class="container promo-grid">
+            <div class="promo-card">
+                <i class="fa-solid fa-truck-fast promo-icon"></i>
+                <div>
+                    <h4>Frete Grátis para todo o Brasil</h4>
+                    <p>Em compras a partir de R$ 199,00</p>
+                </div>
+            </div>
+            <div class="promo-card">
+                <i class="fa-solid fa-rotate-left promo-icon"></i>
+                <div>
+                    <h4>Troca Smart Nexus</h4>
+                    <p>Seu usado vale até R$ 3.000 de desconto</p>
+                </div>
+            </div>
+            <div class="promo-card">
+                <i class="fa-solid fa-shield-halved promo-icon"></i>
+                <div>
+                    <h4>Nexus Care+</h4>
+                    <p>Proteção completa contra danos acidentais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ECOSYSTEM SECTION  -->
+    <section class="ecosystem-section" id="ecosystem">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Conectividade Total</span>
+                <h2 class="section-title">Ecossistema Nexus Galaxy</h2>
+                <p class="section-desc">Trabalhe, jogue e viva em perfeita sintonia entre seus dispositivos.</p>
+            </div>
+
+            <div class="ecosystem-grid">
+                <div class="eco-card eco-large">
+                    <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=800&auto=format&fit=crop" alt="Nexus Tab Pro">
+                    <div class="eco-overlay">
+                        <h3>Nexus Tab S9 Ultra</h3>
+                        <p>Tela AMOLED de 14.6" para criação sem limites.</p>
+                        <button class="btn btn-light-sm" onclick="quickAddToCart(3)">Ver Oferta</button>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?q=80&w=800&auto=format&fit=crop" alt="Nexus Watch">
+                    <div class="eco-overlay">
+                        <h3>Nexus Watch Ultra</h3>
+                        <p>Monitoramento de saúde em tempo real.</p>
+                        <button class="btn btn-light-sm" onclick="quickAddToCart(2)">Ver Oferta</button>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=800&auto=format&fit=crop" alt="Nexus Buds">
+                    <div class="eco-overlay">
+                        <h3>Nexus Buds Pro 3</h3>
+                        <p>Cancelamento de ruído ativo inteligente.</p>
+                        <button class="btn btn-light-sm" onclick="quickAddToCart(4)">Ver Oferta</button>
+                    </div>
+                </div>
+                <div class="eco-card eco-large">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_653504-MLA88984446487_072025-OO.webp" alt="Nexus Smart TV">
+                    <div class="eco-overlay">
+                        <h3>Nexus Smart TV Neo QLED 65</h3>
+                        <p>Processador de IA com contraste infinito e design Ultraslim.</p>
+                        <button class="btn btn-light-sm" onclick="quickAddToCart(5)">Ver Oferta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATÁLOGO COM FILTROS AVANÇADOS -->
+    <main class="container main-catalog" id="catalog">
+        <div class="section-header">
+            <h2 class="section-title">Explore Nossos Produtos</h2>
+            <p class="section-desc">Selecione a categoria perfeita para o seu estilo de vida</p>
+        </div>
+
+        <div class="catalog-layout">
+            <!-- PAINEL DE FILTROS LATERAL -->
+            <aside class="filters-sidebar">
+                <div class="filter-header">
+                    <h3><i class="fa-solid fa-sliders"></i> Filtros</h3>
+                    <button class="btn-text" onclick="resetFilters()">Limpar</button>
+                </div>
+
+                <div class="filter-group">
+                    <label class="filter-label">Categorias</label>
+                    <div class="category-buttons">
+                        <button class="cat-btn active" data-cat="all" onclick="filterCategory('all', this)">Todos</button>
+                        <button class="cat-btn" data-cat="mobile" onclick="filterCategory('mobile', this)">Smartphones</button>
+                        <button class="cat-btn" data-cat="wearable" onclick="filterCategory('wearable', this)">Wearables</button>
+                        <button class="cat-btn" data-cat="tablets" onclick="filterCategory('tablets', this)">Tablets & Note</button>
+                        <button class="cat-btn" data-cat="audio" onclick="filterCategory('audio', this)">Áudio Premium</button>
+                        <button class="cat-btn" data-cat="home" onclick="filterCategory('home', this)">Smart Home & TV</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label class="filter-label">Preço Máximo: <span id="price-val" class="price-highlight">R$ 10.000</span></label>
+                    <input type="range" id="price-filter" min="500" max="10000" step="250" value="10000" oninput="updatePriceLabel(this.value); applyFilters();">
+                </div>
+
+                <div class="filter-group">
+                    <label class="filter-label">Recursos Especializados</label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="check-ai" onchange="applyFilters()"> Nexus AI Incluído
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="check-5g" onchange="applyFilters()"> Conectividade 5G
+                    </label>
+                </div>
+            </aside>
+
+            <!-- GRADE DE PRODUTOS -->
+            <section class="products-container">
+                <div id="product-grid" class="product-grid">
+                    <!-- Cards de Produtos inseridos dinamicamente via JS -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER ESTILO -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="footer-logo">NEXUS</div>
+                    <p>Inovação inspirada para moldar o futuro. Tecnologia acessível com sofisticação global.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Produtos & Serviços</h4>
+                    <ul>
+                        <li><a href="#">Smartphones Galaxy</a></li>
+                        <li><a href="#">Tablets & Laptops</a></li>
+                        <li><a href="#">Dispositivos Vestíveis</a></li>
+                        <li><a href="#">Smart TVs & Soundbars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suporte & Atendimento</h4>
+                    <ul>
+                        <li><a href="#">Nexus Care+</a></li>
+                        <li><a href="#">Suporte ao Cliente</a></li>
+                        <li><a href="#">Assistência Técnica</a></li>
+                        <li><a href="#">Status do Pedido</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Conecte-se conosco</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEXUS Electronics. Todos os direitos reservados. Projeto demonstrativo estilo Samsung Store.</p>
+                <div class="legal-links">
+                    <a href="#">Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Acessibilidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DRAWER: CARRINHO LATERAL -->
+    <div id="cart-drawer" class="drawer-overlay">
+        <div class="drawer-content">
+            <div class="drawer-header">
+                <h3><i class="fa-solid fa-bag-shopping"></i> Seu Carrinho</h3>
+                <button onclick="toggleCart()" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="cart-items" class="drawer-body">
+                <!-- Injetado dinamicamente -->
+            </div>
+            <div class="drawer-footer">
+                <div class="summary-line">
+                    <span>Subtotal:</span>
+                    <strong id="cart-total">R$ 0,00</strong>
+                </div>
+                <p class="shipping-info"><i class="fa-solid fa-truck"></i> Frete calculado no checkout</p>
+                <button onclick="openCheckout()" class="btn btn-primary btn-block">Finalizar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: FAVORITOS -->
+    <div id="fav-modal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-heart accent-red"></i> Meus Favoritos</h3>
+                <button onclick="toggleModal('fav-modal')" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="fav-items" class="modal-body">
+                <!-- Injetado dinamicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: USER / LOGIN -->
+    <div id="user-modal" class="modal-overlay">
+        <div class="modal-card modal-sm">
+            <div class="modal-header">
+                <h3>Conta Nexus</h3>
+                <button onclick="toggleModal('user-modal')" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="handleLogin(event)" class="form-stack">
+                    <div class="input-group">
+                        <label>E-mail ou ID Nexus</label>
+                        <input type="email" id="login-email" required placeholder="exemplo@nexus.com">
+                    </div>
+                    <div class="input-group">
+                        <label>Senha</label>
+                        <input type="password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-block">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: CHECKOUT & PAGAMENTO SIMULADO -->
+    <div id="checkout-modal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Finalizar Compra - Nexus Checkout</h3>
+                <button onclick="toggleModal('checkout-modal')" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="checkout-steps">
+                    <div class="payment-selection">
+                        <label class="form-label">Selecione o Método de Pagamento</label>
+                        <div class="pay-options-grid">
+                            <button type="button" onclick="selectPayMethod('pix')" id="btn-pix" class="pay-option active">
+                                <i class="fa-solid fa-qrcode"></i>
+                                <span>PIX (5% OFF)</span>
+                            </button>
+                            <button type="button" onclick="selectPayMethod('card')" id="btn-card" class="pay-option">
+                                <i class="fa-regular fa-credit-card"></i>
+                                <span>Cartão de Crédito</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="pay-details" class="pay-details-box">
+                        <!-- Conteúdo dinâmico via JS -->
+                    </div>
+
+                    <div class="checkout-summary-box">
+                        <div class="summary-line">
+                            <span>Total a Pagar:</span>
+                            <span id="checkout-final-price" class="final-price">R$ 0,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button onclick="processPayment()" class="btn btn-primary btn-block">Confirmar e Pagar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
